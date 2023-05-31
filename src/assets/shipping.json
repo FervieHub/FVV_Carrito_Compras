@@ -10,5 +10,13 @@
   {
     "type": "Postal",
     "price": 2.99
+  },
+  {
+    "type": "Aereo",
+    "price": 27
+  },
+  {
+    "type": "Fedex",
+    "price": 39
   }
 ]

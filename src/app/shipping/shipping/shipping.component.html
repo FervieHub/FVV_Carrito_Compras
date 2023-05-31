@@ -1,5 +1,25 @@
+<!--
 <h3>Precios de envio</h3>
 <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
   <span>{{ shipping.type }}</span>
   <span>{{ shipping.price | currency }}</span>
 </div>
+-->
+
+  <h2>Costos de envio - servicio</h2>
+<div class="container mt-5">
+
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shipping of shippingCosts | async">
+        <td>{{ shipping.type }}</td>
+        <td>{{ shipping.price | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
