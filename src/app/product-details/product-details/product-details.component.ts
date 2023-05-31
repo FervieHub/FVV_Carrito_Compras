@@ -27,6 +27,7 @@ this.product = products.find(product => product.id === productIdFromRoute);
   }
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert('El producto fue cargado al carrito');
+    //window.alert('El producto fue cargado al carrito');
+    this.cartService.notAgregar();
   }
 }

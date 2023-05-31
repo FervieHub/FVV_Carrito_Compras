@@ -1,3 +1,4 @@
+import { CartService } from './../../service/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { products } from 'src/app/model/Product';
 
@@ -9,16 +10,21 @@ import { products } from 'src/app/model/Product';
 export class ProductListComponent implements OnInit {
   products = products;
 
-  constructor() { }
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
 
   }
   share() {
-    window.alert('El prducto ha sido compartido');
+    //window.alert('El prducto ha sido compartido');
+    this.cartService.notCompartir();
   }
 
   onNotify() {
-    window.alert('Será notificado cuando el producto salga a la venta'); }
+    //window.alert('Será notificado cuando el producto salga a la venta');
+  this.cartService.notFuturo();
+  }
 
 }
